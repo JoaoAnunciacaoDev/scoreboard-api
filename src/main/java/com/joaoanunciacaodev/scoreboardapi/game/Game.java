@@ -1,6 +1,6 @@
-package com.scoreboard.scoreboard_api.game;
+package com.joaoanunciacaodev.scoreboardapi.game;
 
-import com.scoreboard.scoreboard_api.user.User;
+import com.joaoanunciacaodev.scoreboardapi.user.User;
 import jakarta.persistence.*;
 import java.time.OffsetDateTime;
 

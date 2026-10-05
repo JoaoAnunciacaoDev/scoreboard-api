@@ -1,4 +1,4 @@
-package com.scoreboard.scoreboard_api.game;
+package com.joaoanunciacaodev.scoreboardapi.game;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

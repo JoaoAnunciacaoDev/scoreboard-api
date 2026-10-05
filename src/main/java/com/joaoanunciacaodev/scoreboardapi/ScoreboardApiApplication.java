@@ -1,4 +1,4 @@
-package com.scoreboard.scoreboard_api;
+package com.joaoanunciacaodev.scoreboardapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

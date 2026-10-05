@@ -1,6 +1,7 @@
-package com.scoreboard.scoreboard_api.user;
+package com.joaoanunciacaodev.scoreboardapi.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
+
 }

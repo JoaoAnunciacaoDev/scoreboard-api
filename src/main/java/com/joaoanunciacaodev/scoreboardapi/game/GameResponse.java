@@ -1,4 +1,4 @@
-package com.scoreboard.scoreboard_api.game;
+package com.joaoanunciacaodev.scoreboardapi.game;
 
 import java.time.OffsetDateTime;
 

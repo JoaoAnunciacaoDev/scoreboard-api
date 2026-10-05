@@ -1,7 +1,7 @@
-package com.scoreboard.scoreboard_api.game;
+package com.joaoanunciacaodev.scoreboardapi.game;
 
-import com.scoreboard.scoreboard_api.user.User;
-import com.scoreboard.scoreboard_api.user.UserRepository;
+import com.joaoanunciacaodev.scoreboardapi.user.User;
+import com.joaoanunciacaodev.scoreboardapi.user.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.stereotype.Service;
 
