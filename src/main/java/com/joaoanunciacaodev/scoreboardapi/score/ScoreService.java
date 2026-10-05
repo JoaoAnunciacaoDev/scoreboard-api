@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ScoreService {
@@ -71,6 +72,19 @@ public class ScoreService {
                 // aceita qualquer valor, inteiro ou fracionário
             }
         }
+    }
+
+    public RankingEntryResponse getPlayerRanking(Long leaderboardId, String playerId) {
+        Leaderboard leaderboard = leaderboardRepository.findById(leaderboardId)
+                .orElseThrow(() -> new EntityNotFoundException("Leaderboard não encontrada: " + leaderboardId));
+
+        Optional<ScoreRankingProjection> projection = leaderboard.getSortOrder() == SortOrder.DESC
+                ? scoreRepository.findPlayerRankingDesc(leaderboardId, playerId)
+                : scoreRepository.findPlayerRankingAsc(leaderboardId, playerId);
+
+        return projection
+                .map(RankingEntryResponse::from)
+                .orElseThrow(() -> new EntityNotFoundException("Jogador sem score nessa leaderboard: " + playerId));
     }
 
     private int resolveLimit(Integer requested) {

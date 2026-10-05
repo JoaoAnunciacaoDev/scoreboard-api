@@ -36,4 +36,12 @@ public class ScoreController {
         return scoreService.getRanking(leaderboardId, limit);
     }
 
+    @GetMapping("/{playerId}")
+    public RankingEntryResponse getPlayerRanking(
+            @PathVariable Long leaderboardId,
+            @PathVariable String playerId
+    ) {
+        return scoreService.getPlayerRanking(leaderboardId, playerId);
+    }
+
 }
